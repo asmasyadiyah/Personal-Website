@@ -1,0 +1,133 @@
+<html>
+<head><title>contact me</title>
+<script>
+function validateForm()
+{
+//alternative 1 for form validation
+/*var x = document.forms['myform']['fname'].value;
+if (x=='')
+ {
+  	alert('Pls fill in name');
+	return false;
+	} */
+
+//alternative 2 for form validation
+var valid=true;
+if (document.form.name.value=='')
+	{
+	alert('Please fill in your name');
+	document.form.name.focus();
+	valid=false;
+	}
+
+if (document.form.email.value=='')
+        {
+        alert('Please fill in your email');
+	document.form.email.focus();
+	valid=false;
+	}
+
+if (document.form.age.selectedIndex==0)
+        {
+        alert('Please choose your age');
+	valid=false;
+	}
+
+
+
+if((document.form.gender[0].checked == false) && (document.form.gender[1].checked == false))
+	{
+	alert('Please choose your gender');
+	valid=false;
+	}
+
+if (document.form.nationality.selectedIndex==0)
+	{
+	alert('Please choose your nationality');
+	valid=false;
+	}
+}
+</script>
+
+
+
+
+
+</head>
+<body background = "Picture.jpg">
+<h1><center>Contact me</center></h1>
+Please feel free to ask me or talk to me about anything. I would love to talk to someone ^_^  <br>                  
+my number : 011-55084177
+<hr>
+
+<center>
+<form name = "form" method = "POST" onsubmit = "return validateForm()">
+Name:<br>
+     <input type = "text" name = "name" size = "80"></br>
+
+Email:<br>
+      <input type = "text" name = "email" size = "40"></br>
+
+Number telephone:<br>
+               <input type = "text" name = "number" size = "20"></br>
+
+<p>Age:
+     <select name = "age">
+     <option>Please choose your age
+     <option value = "18">18 years old
+     <option value = "19">19 years old
+     <option value = "20">20 years old
+     <option value = "21">21 years old
+     <option value>Others
+</select></p>
+
+
+<p>
+Gender:<br>
+      <input type = "radio" name = "gender" value = "Male">Male
+      <input type = "radio" name = "gender" value = "Female">Female
+      <input type = "radio" name = "gender" value = "Other">Other
+</p>
+
+<p>Nationality:
+       <select name = "nationality">
+       <option>Please choose your nationality
+       <option value = "Malay">Malay
+       <option value = "Chinese">Chinese
+       <option value = "Indian">Indian
+       <option value = "Other">Other
+</select></p>
+
+
+<p>What are my Favourites things to do in my leisures times:<br>
+   <input type = "checkbox" name = "Watching Youtube">Watching Youtube
+   <input type = "checkbox" name = "Sleeping">Sleeping
+   <input type = "checkbox" name = "Playing Mobile Games">Playing Mobile Games
+   <input type = "checkbox" name = "Eating">Eating
+   <input type = "checkbox" name = "Riding a bicycle">Riding a bicycle
+   <input type = "checkbox" name = "Reading a book">Reading a book
+   <input type = "checkbox" name = "Listen to a songs">Listen to a songs
+   <input type = "checkbox" name = "Cleaning my room">Cleaning my room
+</p>
+
+<p>
+Comment:
+<textarea name = "comment" rows = "10" cols = "50">Please write any comment</textarea></p>
+</p>
+
+<p>
+  <input type = "submit" name = "submit" value = "Submit">
+  <input type = "reset" name = "reset" value = "Reset">
+</p>
+   
+</center>
+</form>
+
+<center>Thank You~~~</center>
+
+<!--Nationality:<br>-->
+
+
+
+</body>
+</html>
